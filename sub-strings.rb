@@ -3,7 +3,7 @@
 def substrings(string, array)
   result = Hash.new(0)
   array.select do |substring|
-    if string.include?(substring)
+    if string.downcase.include?(substring.downcase)
         result["#{substring}"] += 1
     end
   end
